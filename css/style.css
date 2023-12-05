@@ -555,6 +555,9 @@ html[dir="rtl"] .about-us-section:before{
   position: relative;
   overflow: hidden;
 }
+html[dir="rtl"] .services-section{
+  padding-top: 240px;
+}
 .services-section:after{
   content: url(../images/services/services-bg-shape.png);
   position: absolute;
@@ -570,6 +573,9 @@ html[dir="rtl"] .about-us-section:before{
 .project-item {
   opacity: 0.2;
 }
+/* html[dir="rtl"] .projects-slider .swiper-slide{
+  width: 458px !important;
+} */
 .project-img-block {
   position: relative;
   width: 458px;
@@ -651,6 +657,7 @@ html[dir="rtl"] .about-us-section:before{
   font-family: "Bahij_TheSansArabic-SemiBold";
   transition: 0.5s;
   margin:25px 0 0;
+  text-align: start;
 }
 .service-title:hover{
   color: var(--main-hover);
@@ -1328,7 +1335,12 @@ html[dir="rtl"] .footer-accordion.active:after {
   .about-us-section::before{
     top:250px;
   }
- 
+  .project-img-block{
+    width: auto;
+  }
+  .projects-slider .swiper-pagination{
+    bottom: -40px;
+  }
 .services-section{
   padding: 70px 0 100px;
 }
@@ -1378,6 +1390,12 @@ html[dir="rtl"] .footer-accordion.active:after {
   }
   .about-us-section::before{
     content: "";
+  }
+  html[dir="rtl"] .more-link{
+    padding-inline-end: 0;
+  }
+  html[dir="rtl"] .services-section{
+    padding-top: 50px;
   }
   .services-section{
     padding: 50px 0 100px;
@@ -1643,6 +1661,9 @@ html[dir="ltr"] .projects-slider{
     position: relative;
     z-index: 9;
   }
+  html[dir="rtl"] .title{
+    font-size: 35px;
+  }
  
 .projects-slider .swiper-pagination{
   bottom: -45px;
@@ -1745,6 +1766,9 @@ html[dir="ltr"] .projects-slider{
   .main-banner-immg{
    
     top:530px;
+  }
+  .project-img-block{
+    width: auto;
   }
   .portfolio-content{
     gap: 30px;
@@ -1966,6 +1990,9 @@ html[dir="ltr"] .projects-slider{
   .approach-img-shape{
     inset-inline-end: 250px;
     bottom: 9px;
+  }
+  .project-img-block{
+    width: auto;
   }
   }
 @media only screen and  (min-width: 1500px)  {

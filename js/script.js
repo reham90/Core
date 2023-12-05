@@ -94,15 +94,19 @@ $(document).ready(function() {
     breakpoints: {
       0: {
         slidesPerView: 1,
-        spaceBetween: 15,
+        spaceBetween: 20,
+      },
+      667: {
+        slidesPerView: 1,
+        spaceBetween: 120,
       },
       767: {
         slidesPerView: 2,
-        spaceBetween: 30,
+        spaceBetween: 120,
       },
       992: {
-        slidesPerView: 3,
-        spaceBetween: 14,
+        slidesPerView: 1,
+        spaceBetween: 30,
       },
       1199: {
         slidesPerView: 2,
