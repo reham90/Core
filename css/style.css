@@ -474,7 +474,7 @@ html[dir="rtl"] .main-caption{
 .scroll-down {
   position: absolute;
   bottom: 16px;
-  padding-inline-start: calc((100vw - 1440px) / 2);
+  padding-inline-start: calc((100vw - 1170px) / 2);
 
   text-align: center;
   transform: translate(0, -50%);
@@ -548,8 +548,7 @@ html[dir="rtl"] .about-us-section:before{
   font-size: 18px;
  text-decoration: underline;
   transition: 0.5s;
-  width: 890px;
-  padding-inline-end: 90px;
+ 
  
 }
 .more-link:hover {
@@ -732,10 +731,13 @@ html[dir="rtl"] .vision-img-div{
 .vision-img-shape{
   position: absolute;
   z-index: 9;
-  padding-inline-start: 37px;
-  padding-top: 372px;
+  inset-inline-start: 37px;
+  bottom: 37px;
 }
 
+.vision-img-div{
+  position: relative;
+}
 
 /*                       vision-section                             */
 
@@ -2005,30 +2007,6 @@ html[dir="ltr"] .projects-slider{
   }
  
 
-  @media only screen and (max-width: 1500px) and (min-width: 1300px) {
-    
-   
-  .portfolio-content{
-    gap: 30px;
-  }
-  .vision-immg{
-    position: relative;
-  }
-  .vision-content{
-    gap:30px;
-  }
-  .vision-img-shape{
-    padding-top: 290px;
-    inset-inline-start: 220px;
-  }
-  .approach-img-shape{
-    inset-inline-end: 250px;
-    bottom: 9px;
-  }
-  .project-img-block{
-    width: auto;
-  }
-  }
 @media only screen and  (min-width: 1170px)  {
   .container{
     width: 1170 ;
