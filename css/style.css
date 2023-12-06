@@ -1599,6 +1599,7 @@ html[dir="ltr"] .projects-slider{
     order: -1;
     margin-bottom: 30px;
     display: flex;
+    position: relative;
   }
   
   .approach-img-shape{
@@ -1625,6 +1626,13 @@ html[dir="ltr"] .projects-slider{
     padding: 0 20px;
    top:58%;
    width: auto;
+   margin-inline-start: 0;
+   height: auto;
+   position: absolute;
+  }
+  .main-banner-immg .img-holder{
+    position: relative;
+    width: 100%;
   }
   .caption-title {
     font-size: 25px;
@@ -1674,6 +1682,7 @@ html[dir="ltr"] .projects-slider{
   .vision-content{
     padding: 0;
     flex-wrap: wrap;
+    gap:0;
   }
  
   .title{
