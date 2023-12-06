@@ -113,7 +113,7 @@ $(document).ready(function() {
         spaceBetween: 30,
       },
       1300: {
-        slidesPerView: 2,
+        slidesPerView: 2.5,
         spaceBetween: 30,
       },
     },

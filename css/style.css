@@ -393,8 +393,8 @@ html[dir="ltr"] .cats-dispaly-3{
            banner section                     */
 .main-banner {
   position: relative;
-
   background-color: var(--main-color);
+  height: 100vh;
 }
 .main-banner:after{
   content: url(../images/main-banner/circle.png);
@@ -408,44 +408,57 @@ html[dir="rtl"] .main-banner:after{
 
 .main-caption-div {
   position: relative;
-  height: 100vh;
+  height: auto;
+  padding-top: 204px;
 }
 .main-caption {
-  position: absolute;
-  top: 215px;
-  bottom: 0;
-  inset-inline-start: 0;
+ 
 
   max-width: 1040px;
   text-align: start;
 
   z-index: 4;
 }
+html[dir="rtl"] .main-caption{
+  max-width: 800px;
+}
 .caption-title {
   font-size: 72px;
   color: rgb(237, 224, 218);
   margin: 0;
   text-align: start;
-  padding-inline-start: 90px;
+
   font-family: "Bahij_TheSansArabic-Bold";
   line-height: 1.111;
  
   width: 100%;
 }
 .main-banner-immg{
-  position: absolute;
-  top:460px;
-  inset-inline-end: 0;
-  z-index: 9;
-  width: 950px;
+ position: relative;
+ z-index: 9;
+ margin-inline-start: 390px;
+ height: calc(100vh - 444px);
 }
-.main-banner-immg img{
+.main-banner-immg .img-holder{
   width: 100%;
+  top: 0;
+  position: absolute;
+  inset-inline-start: 0;
+  width: calc(50vw + 180px);
+  max-width: none;
+ bottom:-170px;
+ display: block;
+}
+.img-holder img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .main-banner-immg:before{
   content: url(../images/main-banner/square.png);
   position: absolute;
   top:-44px;
+  z-index: 2;
   inset-inline-start: -32px;
 }
 .scroll-down-img-section {
@@ -461,7 +474,7 @@ html[dir="rtl"] .main-banner:after{
 .scroll-down {
   position: absolute;
   bottom: 16px;
-  inset-inline-start: 4%;
+  padding-inline-start: calc((100vw - 1440px) / 2);
 
   text-align: center;
   transform: translate(0, -50%);
@@ -515,17 +528,16 @@ html[dir="rtl"] .about-us-section:before{
   transform: scaleX(-1);
 }
 .about-text{
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+  max-width: 790px;
+    margin-inline-start: auto;
 }
 .about-us-text {
   color: var(--main-color);
   font-size: 24px;
   line-height: 2;
-  max-width: 890px;
+ 
   z-index: 9;
-  padding-inline-end: 90px;
+ 
   text-align: justify;
   margin: 0 0 50px;
   
@@ -564,9 +576,7 @@ html[dir="rtl"] .services-section{
   inset-inline-end: 0;
   top:-130px;
 }
-.services-content{
-  padding-inline-start: 90px;
-}
+
 .color-white{
   color: #ede0da;
 }
@@ -578,7 +588,7 @@ html[dir="rtl"] .services-section{
 } */
 .project-img-block {
   position: relative;
-  width: 458px;
+ 
   overflow: hidden;
   transition: 0.5s;
 }
@@ -662,10 +672,7 @@ html[dir="rtl"] .services-section{
 .service-title:hover{
   color: var(--main-hover);
 }
-html[dir="ltr"] .projects-slider {
-  padding-inline-start: 0px;
-  padding-inline-end: 380px;
-}
+
 
 /*                      services-section                            */
 
@@ -677,8 +684,8 @@ html[dir="ltr"] .projects-slider {
 .vision-content{
   display: flex;
   justify-content: space-between;
-  padding:0 90px ;
-  
+  gap:85px;
+  position: relative;
 }
 .vision-img-section{
   width:458px;
@@ -711,7 +718,7 @@ html[dir="rtl"] .vision-img-div{
  text-align: justify;
   margin-bottom: 30px;
   line-height: 1.667;
-  max-width: 650px;
+  max-width: 595px;
 }
 .ff-bold{
   font-family: "Bahij_TheSansArabic-SemiBold";
@@ -751,10 +758,15 @@ html[dir="rtl"] .vision-img-div{
   text-decoration: underline;
 }
 .approach-img-div{
-  position: relative;
-  margin-top: 90px;
+  position: absolute;
+  margin-top: 93px;
   width: 458px;
   z-index: 9;
+  height: 516px;
+  inset-inline-end: 0;
+}
+.approach-content{
+  gap:85px;
 }
 html[dir="rtl"] .approach-img-div{
   display: flex;
@@ -762,8 +774,8 @@ html[dir="rtl"] .approach-img-div{
 .approach-img-shape{
   position: absolute;
   z-index: 9;
-  inset-inline-end: 330px;
-  bottom: -100px;
+  bottom: 37px;
+  inset-inline-start: 37px;
  
 }
 .approach-immg{
@@ -959,7 +971,11 @@ html[dir="rtl"] .quote-section::before{
   color: var(--main-color);
   line-height: 1.5;
   margin: 0 0 16px;
-  text-align: start;
+  text-align: start; 
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
 }
 .news-more-link{
   font-size: 14px;
@@ -2010,10 +2026,10 @@ html[dir="ltr"] .projects-slider{
     width: auto;
   }
   }
-@media only screen and  (min-width: 1500px)  {
+@media only screen and  (min-width: 1170px)  {
   .container{
-    width: 1440px ;
-    max-width: 1440px;
+    width: 1170 ;
+    max-width: 1170px;
   }
 
 }
