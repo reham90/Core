@@ -535,7 +535,7 @@ html[dir="rtl"] .about-us-section:before{
   color: var(--main-color);
   font-size: 24px;
   line-height: 2;
- 
+ position: relative;
   z-index: 9;
  
   text-align: justify;
@@ -562,13 +562,13 @@ html[dir="rtl"] .about-us-section:before{
 
 .services-section{
   background-color: var(--main-color);
-  padding: 193px 0 280px;
+  padding: 173px 0 280px;
   position: relative;
   overflow: hidden;
 }
-html[dir="rtl"] .services-section{
-  padding-top: 240px;
-}
+/* html[dir="rtl"] .services-section{
+  padding-top: 275px;
+} */
 .services-section:after{
   content: url(../images/services/services-bg-shape.png);
   position: absolute;
@@ -678,7 +678,7 @@ html[dir="rtl"] .services-section{
 /*                       vision-section                             */
 .vision-section {
  background-color: #ede0da;
- padding: 120px 0 100px;
+ padding: 100px 0 100px;
 }
 .vision-content{
   display: flex;
@@ -697,14 +697,23 @@ html[dir="rtl"] .services-section{
 } */
 html[dir="rtl"] .vision-img-div{
   display: flex;
+  position: absolute;
+  width: 458px;
 }
 .title{
   text-transform: uppercase;
   font-size: 60px;
   font-family: "Bahij_TheSansArabic-Bold";
-  margin: 0 0 57px;
+  margin: 0 0 30px;
   text-align: start;
 }
+html[dir="rtl"] .title{
+  margin: 0 0 50px;
+}
+html[dir="rtl"] .services-section .title{
+  margin: 0 0 30px;
+}
+
 .color-green{
   color: var(--main-color);
 }
@@ -715,7 +724,7 @@ html[dir="rtl"] .vision-img-div{
 .vision-paragraph{
   color: var(--main-color);
  text-align: justify;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   line-height: 1.667;
   max-width: 595px;
 }
@@ -734,9 +743,12 @@ html[dir="rtl"] .vision-img-div{
   inset-inline-start: 37px;
   bottom: 37px;
 }
-
+html[dir="rtl"] .vision-img-shape{
+  bottom: 147px;
+}
 .vision-img-div{
   position: relative;
+  height: 516px;
 }
 
 /*                       vision-section                             */
@@ -745,7 +757,7 @@ html[dir="rtl"] .vision-img-div{
 /*                    approach-section                              */
 .approach-section{
   background-color: #ede0da;
-  padding: 125px 0 90px;
+  padding: 100px 0 ;
 }
 .more-2{
   display: flex;
@@ -788,14 +800,14 @@ html[dir="rtl"] .approach-img-div{
 /*                      portfolio-section                      */
 .portfolio-section{
   background-color: #f6efec;
-  padding: 152px 0 125px;
+  padding: 130px 0 125px;
 }
 .portfolio-title-div{
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 57px;
+  margin-bottom: 34px;
 }
 .portfolio-content{
   display: flex;
@@ -1026,7 +1038,7 @@ html[dir="rtl"] .quote-section::before{
   .nav-wrap {
     display: flex;
     flex-direction: column;
-    max-height: 310px;
+    max-height: 325px;
     flex-wrap: wrap;
   }
 }
@@ -1353,6 +1365,10 @@ html[dir="rtl"] .footer-accordion.active:after {
   .portfolio-content{
     gap: 30px;
   }
+
+  .approach-img-div{
+    position: relative;
+  }
   .nav-header .img-logo img {
     max-width: 190px;
   }
@@ -1374,12 +1390,9 @@ html[dir="rtl"] .footer-accordion.active:after {
   .vision-immg{
     position: relative;
   }
-  .main-banner-immg{
-    width: 700px;
-    top:415px;
-  }
+ 
   .main-caption-div{
-    height: 630px;
+    height: 430px;
   }
   .vision-content{
     gap:30px
@@ -1397,21 +1410,37 @@ html[dir="rtl"] .footer-accordion.active:after {
     font-size: 14px;
   }
   .vision-img-shape{
-    inset-inline-start: 174px;
-    padding-top: 205px;
-    padding-inline-start: 0;
+ bottom: 112px;
   }
   .approach-img-shape{
     inset-inline-end: 0;
-    bottom: 170px;
+    bottom: 112px;
     inset-inline-start: 37px;
   }
+  .scroll-down{
+    padding-inline-start: calc((100vw - 930px) / 2);
+  }
+
 }
 
 @media (max-width: 991px) {
   body {
     position: relative;
   }
+  html[dir="rtl"] .vision-img-div{
+    width: auto;
+    position: relative;
+  }
+  html[dir="rtl"] .title{
+    margin: 0 0 30px;
+  }
+  html[dir="rtl"] .approach-img-div{
+    display: block;
+    height: auto;
+  }
+  html[dir="rtl"] .approach-img-shape {
+    bottom: 160px;
+}
   .about-us-section{
     padding: 50px 0;
   }
@@ -1597,7 +1626,7 @@ html[dir="ltr"] .projects-slider{
   }
   .approach-img-div{
     width: auto;
-    margin-top: 70px;
+    margin-top: 80px;
     order: -1;
     margin-bottom: 30px;
     display: flex;
@@ -1614,6 +1643,7 @@ html[dir="ltr"] .projects-slider{
   }
   .vision-img-div{
     position: relative;
+    height: auto;
   }
   .approach-content{
     position: relative;
@@ -1694,9 +1724,9 @@ html[dir="ltr"] .projects-slider{
     position: relative;
     z-index: 9;
   }
-  html[dir="rtl"] .title{
+  /* html[dir="rtl"] .title{
     font-size: 35px;
-  }
+  } */
  
 .projects-slider .swiper-pagination{
   bottom: -45px;
@@ -1792,14 +1822,18 @@ html[dir="ltr"] .projects-slider{
     visibility: visible;
     z-index: 99;
   }
+  html[dir="rtl"] .main-banner-immg{
+    margin-inline-start: 285px;
+  }
+  html[dir="rtl"] .vision-img-div{
+    width: 360px;
+  }
 
 
 }
 @media only screen and (max-width: 1280px) and (min-width:1199px) {
-  .main-banner-immg{
-   
-    top:530px;
-  }
+
+
   .project-img-block{
     width: auto;
   }
@@ -1825,6 +1859,9 @@ html[dir="ltr"] .projects-slider{
 
 
 @media only screen and (max-width: 767px) and (min-width: 667px) {
+  .main-caption-div{
+    padding-top: 117px;
+  }
   .main-banner-immg{
     top: 70%;
     width: 70%;
@@ -1852,10 +1889,14 @@ html[dir="ltr"] .projects-slider{
     gap: 30px;
 }
   .approach-img-shape{
-    bottom: 195px;
+    bottom: 258px;
+  }
+  .newsletter-button{
+    width: 65px;
   }
   .main-caption-div{
     height: 300px;
+    padding-top: 100px;
   }
   .main-banner-immg:before{
     inset-inline-start: -32px;
@@ -1951,17 +1992,15 @@ html[dir="ltr"] .projects-slider{
   .scroll-down{
     left: 18%;
   }
-  .main-banner-immg{
-    inset-inline-end: 0;
-    left: 100%;
-    transform: translateX(-100%);
-  }
+ .main-banner{
+  height: 500px;
+ }
   .about-us-section {
-    padding: 201px 0 50px;
+    padding: 230px 0 50px;
 }
 }
 
-@media only screen and (max-width: 912px) and (min-width: 768px) {
+@media only screen and (max-width: 912px) and (min-width: 769px) {
 
   .main-banner-immg {
     /* top: 43%; */
@@ -1973,13 +2012,13 @@ html[dir="ltr"] .projects-slider{
     left: 14%;
   }
   .about-us-section {
-    padding: 50px 0 50px;
+    padding: 300px 0 50px;
 }
 }
 @media only screen and (min-width: 913px) and (max-width: 932px) {
   .main-banner-immg{
     top:65%;
-    width: 50%;
+    
     padding: 0;
   }
   .scroll-down{
@@ -1987,7 +2026,7 @@ html[dir="ltr"] .projects-slider{
     transform: translateX(-50%);
   }
   .about-us-section {
-    padding: 166px 0 50px;
+    padding: 350px 0 50px;
 }
 .main-caption{
   top:22%;
