@@ -402,6 +402,20 @@ html[dir="ltr"] .cats-dispaly-3{
   inset-inline-end:2px;
   top:170px;
 }
+.without-circle:after{
+  content:"";
+}
+.with-square:after{
+  content: url(../images/about/shape.png);
+  position: absolute;
+  inset-inline-end:40px;
+ top:340px;
+ z-index: 1;
+}
+.with-square{
+  height: 396px;
+  position: relative;
+}
 html[dir="rtl"] .main-banner:after{
   transform: scaleX(-1);
 }
@@ -524,6 +538,9 @@ html[dir="rtl"] .main-caption{
   inset-inline-start: 0;
   top:167px;
 }
+.without-shape:before{
+  content:"";
+}
 html[dir="rtl"] .about-us-section:before{
   transform: scaleX(-1);
 }
@@ -554,6 +571,23 @@ html[dir="rtl"] .about-us-section:before{
 .more-link:hover {
   color: var(--main-hover);
   text-decoration: underline;
+}
+.about-text-2{
+  width: 750px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.p-100{
+  padding: 100px 0;
+}
+.about-text-2-img{
+  margin-bottom: 33px;
+}
+.about-us-text-2{
+  font-size: 18px;
+  font-family: "Bahij_TheSansArabic-SemiLight";
+  margin: 0;
 }
 
 /*                       about-section                             */
@@ -1255,6 +1289,69 @@ html[dir="rtl"] .footer-accordion.active:after {
 
 /*                                   footer                            */
 
+/*                  breadcrumb                        */
+.breadcrumb-sec {
+  position: relative;
+    padding-top: 210px;
+}
+.breadcrumb-title{
+  color: rgb(237, 224, 218);
+  font-size: 60px;
+  margin: 0 0 10px;
+  font-family: "Bahij_TheSansArabic-Bold";
+  text-align: start;
+}
+html[dir="rtl"] .breadcrumb-title{
+  margin: 0 0 30px;
+}
+ol.breadcrumb {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+ 
+  z-index: 2;
+}
+ ol.breadcrumb li a,  ol.breadcrumb li span,  ol.breadcrumb li {
+  font-size: 14px;
+  
+  color: var(--main-hover);
+  text-decoration: none;
+}
+
+ol.breadcrumb li:not(.active):after {
+  content: "/";
+  padding: 0 7px;
+}
+
+@media (max-width: 991px){
+
+.about-text-2{
+  width: 100%;
+}
+.breadcrumb-title{
+  font-size: 40px;
+  text-align: center;
+}
+.with-square{
+  height: 250px !important;
+}
+.breadcrumb-sec{
+  padding-top: 130px;
+}
+.with-square:after{
+  top:185px;
+}
+.p-100{
+  padding: 70px 0 !important;
+}
+}
+/*                         breadcrumb-section                    */
+
 /*                                    media query                                    */
 /*                    menu in phone size                      */
 
@@ -1277,6 +1374,9 @@ html[dir="rtl"] .footer-accordion.active:after {
     z-index: 8;
     overflow-y: auto;
     transition: all 0.3s ease-in-out;
+  }
+  ol.breadcrumb{
+    justify-content: center;
   }
   html[dir="ltr"] .navgition {
     clip-path: circle(11.2% at 86% 14%);
