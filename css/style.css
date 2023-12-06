@@ -680,6 +680,15 @@ html[dir="ltr"] .projects-slider {
   padding:0 90px ;
   
 }
+.vision-img-section{
+  width:458px;
+}
+.approach-img-section{
+  width: auto;
+}
+/* .vision-section .vision-text{
+  margin-inline-start: 85px;
+} */
 html[dir="rtl"] .vision-img-div{
   display: flex;
 }
@@ -702,7 +711,7 @@ html[dir="rtl"] .vision-img-div{
  text-align: justify;
   margin-bottom: 30px;
   line-height: 1.667;
-  max-width: 610px;
+  max-width: 650px;
 }
 .ff-bold{
   font-family: "Bahij_TheSansArabic-SemiBold";
@@ -1397,6 +1406,9 @@ html[dir="rtl"] .footer-accordion.active:after {
   html[dir="rtl"] .services-section{
     padding-top: 50px;
   }
+  .vision-img-section{
+    width: 100%;
+  }
   .services-section{
     padding: 50px 0 100px;
   }
@@ -1552,14 +1564,7 @@ html[dir="ltr"] .projects-slider{
     margin-bottom: 22px;
     width: 100%;
   }
-  html[dir="rtl"] .first-level-link:after {
-    content: "";
-    transition: 0.5s;
-  }
-  html[dir="ltr"] .first-level-link:after {
-    content: "";
-    transition: 0.5s;
-  }
+
   .slide-menu-2.active .first-level-link:after {
     transform: rotate(-180deg);
   }
@@ -1654,6 +1659,7 @@ html[dir="ltr"] .projects-slider{
     padding: 0;
     flex-wrap: wrap;
   }
+ 
   .title{
     font-size: 45px;
     width: 100%;
@@ -1812,7 +1818,7 @@ html[dir="ltr"] .projects-slider{
 
 @media only screen and (max-width: 994px) and (min-width: 768px) {
   .main-caption{
-    top:22%;
+    top:50%;
   }
   .portfolio-content {
     flex-wrap: nowrap;
@@ -1820,6 +1826,9 @@ html[dir="ltr"] .projects-slider{
 }
   .approach-img-shape{
     bottom: 195px;
+  }
+  .main-caption-div{
+    height: 300px;
   }
   .main-banner-immg:before{
     inset-inline-start: -32px;
@@ -1847,7 +1856,9 @@ html[dir="ltr"] .projects-slider{
 .approach-img-section{
   width: 100%;
 }
- 
+ .scroll-down{
+  display: none;
+ }
 
   .nav-foot-link {
     font-size: 13px;
@@ -1929,6 +1940,7 @@ html[dir="ltr"] .projects-slider{
     /* top: 43%; */
     width: 100%;
     padding: 0 20px;
+    position: relative;
   }
   .scroll-down{
     left: 14%;
@@ -1937,7 +1949,7 @@ html[dir="ltr"] .projects-slider{
     padding: 50px 0 50px;
 }
 }
-@media only screen and (min-width: 912px) and (max-width: 932px) {
+@media only screen and (min-width: 913px) and (max-width: 932px) {
   .main-banner-immg{
     top:65%;
     width: 50%;
@@ -1948,7 +1960,10 @@ html[dir="ltr"] .projects-slider{
     transform: translateX(-50%);
   }
   .about-us-section {
-    padding: 135px 0 50px;
+    padding: 166px 0 50px;
+}
+.main-caption{
+  top:22%;
 }
 }
 
