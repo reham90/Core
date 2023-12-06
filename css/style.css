@@ -175,28 +175,14 @@ header {
   overflow: hidden;
   position: relative;
 }
-.contact-link:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  inset-inline-start: 0;
-  width: 158px;
-  height: 47px;
-  background-color: rgb(237, 224, 218);
-  transition: all 1s;
-  z-index: -1;
-  transform: translateX(-100%);
- 
-}
-.contact-link:hover:before {
-  transform: translateX(0);
-  
-  
-}
+
 .contact-link:hover{
-  color: var(--main-color);
-  z-index: 2;
+  background-color: rgb(237, 224, 218);
+  columns: var(--main-color);
+  
+  
 }
+
 .fixed-header .contact-link:hover{
   color: var(--main-color);
   
@@ -423,7 +409,7 @@ html[dir="rtl"] .main-banner:after{
 .main-caption-div {
   position: relative;
   height: auto;
-  padding-top: 204px;
+  padding-top: 140px;
 }
 .main-caption {
  
@@ -481,7 +467,7 @@ html[dir="rtl"] .main-caption{
   justify-content: center;
   background-image: url(../images/scroll-down.png);
   background-repeat: no-repeat;
-  height: 45px;
+  height: 52px;
   background-size: cover;
   width: 28px;
 }
@@ -499,7 +485,7 @@ html[dir="rtl"] .main-caption{
 }
 
 .scroll-down-icon {
-  background-color: #fff;
+  background-color: var(--main-hover);
   height: 8px;
   width: 1px;
   display: flex;
@@ -545,7 +531,7 @@ html[dir="rtl"] .about-us-section:before{
   transform: scaleX(-1);
 }
 .about-text{
-  max-width: 790px;
+  max-width: 750px;
     margin-inline-start: auto;
 }
 .about-us-text {
@@ -600,9 +586,9 @@ html[dir="rtl"] .about-us-section:before{
   position: relative;
   overflow: hidden;
 }
-/* html[dir="rtl"] .services-section{
-  padding-top: 275px;
-} */
+html[dir="rtl"] .services-section{
+  padding-top: 287px;
+}
 .services-section:after{
   content: url(../images/services/services-bg-shape.png);
   position: absolute;
@@ -753,7 +739,7 @@ html[dir="rtl"] .services-section .title{
 }
 .vision-immg{
   z-index: 9;
-  position: absolute;
+  position: relative;
 }
 .vision-paragraph{
   color: var(--main-color);
@@ -777,11 +763,9 @@ html[dir="rtl"] .services-section .title{
   inset-inline-start: 37px;
   bottom: 37px;
 }
-html[dir="rtl"] .vision-img-shape{
-  bottom: 147px;
-}
+
 .vision-img-div{
-  position: relative;
+  position:absolute;
   height: 516px;
 }
 
@@ -834,7 +818,7 @@ html[dir="rtl"] .approach-img-div{
 /*                      portfolio-section                      */
 .portfolio-section{
   background-color: #f6efec;
-  padding: 130px 0 125px;
+  padding: 160px 0 125px;
 }
 .portfolio-title-div{
   display: flex;
@@ -1604,7 +1588,7 @@ html[dir="ltr"] .projects-slider{
     color: rgb(237, 224, 218);
   }
   .show-icons .menu-bars .times {
-    color: var(--main-color);
+    color: gray;
   }
   .contact-link {
     width: 120px;
@@ -1767,8 +1751,8 @@ html[dir="ltr"] .projects-slider{
     width: 100%;
   }
   .caption-title {
-    font-size: 25px;
-    line-height: 1.5;
+    font-size: 34px;
+    line-height: 1.2;
     padding-inline-start: 0;
   }
   .main-banner-immg:before{
@@ -1902,7 +1886,8 @@ html[dir="ltr"] .projects-slider{
   .big-menu .language-anchor{
     font-family: "Bahij_TheSansArabic-Plain";
     position: absolute;
-    top: 25px;
+    top: 40px;
+    color: gray;
   }
   .footer-bg {
     max-width: 150px;
@@ -1925,9 +1910,7 @@ html[dir="ltr"] .projects-slider{
   html[dir="rtl"] .main-banner-immg{
     margin-inline-start: 285px;
   }
-  html[dir="rtl"] .vision-img-div{
-    width: 360px;
-  }
+ 
 
 
 }
