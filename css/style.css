@@ -1997,14 +1997,8 @@ html[dir="ltr"] .projects-slider{
  
 
   @media only screen and (max-width: 1500px) and (min-width: 1300px) {
-    .main-banner-immg{
-      top:515px;
-    }
-    .about-us-section {
     
-      padding: 155px 0 124px;
-     
-  }
+   
   .portfolio-content{
     gap: 30px;
   }
