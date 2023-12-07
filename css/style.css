@@ -160,7 +160,7 @@ header {
 .contact-link {
   position: relative;
   
- margin-top: 4px;
+
   background-color: var(--main-hover);
   color: var(--main-color);
   font-size: 16px;
@@ -386,8 +386,9 @@ html[dir="ltr"] .cats-dispaly-3{
   content: url(../images/main-banner/circle.png);
   position: absolute;
   inset-inline-end:2px;
-  top:170px;
+  top:110px;
 }
+
 .without-circle:after{
   content:"";
 }
@@ -409,7 +410,7 @@ html[dir="rtl"] .main-banner:after{
 .main-caption-div {
   position: relative;
   height: auto;
-  padding-top: 140px;
+  padding-top: 165px;
 }
 .main-caption {
  
@@ -1313,7 +1314,9 @@ ol.breadcrumb li:not(.active):after {
 }
 
 @media (max-width: 991px){
-
+  .scroll-down-img-section{
+    display: none;
+  }
 .about-text-2{
   width: 100%;
 }
@@ -1353,12 +1356,13 @@ ol.breadcrumb li:not(.active):after {
     opacity: 0;
     visibility: hidden;
     clip-path: circle(10.9% at 16% 16%);
-    background-color: rgba(255, 255, 255, 0.99);
+    background-color: rgba(45, 76, 79,0.969);
     transition: 0.4s;
     z-index: 8;
     overflow-y: auto;
     transition: all 0.3s ease-in-out;
   }
+  
   ol.breadcrumb{
     justify-content: center;
   }
@@ -1384,6 +1388,9 @@ ol.breadcrumb li:not(.active):after {
     align-items: center;
     padding: 25% 20px 20px;
     margin-inline-start: 0;
+    position: relative;
+    padding-inline-start: 5px;
+    padding-inline-end: 0;
   }
   .nav-header li {
     margin: 0;
@@ -1522,11 +1529,14 @@ ol.breadcrumb li:not(.active):after {
     display: block;
     height: auto;
   }
-  html[dir="rtl"] .approach-img-shape {
-    bottom: 160px;
+.main-banner{
+  height: 518px;
 }
   .about-us-section{
-    padding: 50px 0;
+    padding: 131px 0 97px;
+  }
+  .more-link{
+    font-size: 14px;
   }
   .about-us-section::before{
     content: "";
@@ -1539,9 +1549,14 @@ ol.breadcrumb li:not(.active):after {
   }
   .vision-img-section{
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-us-section{
+    background-color: #ede0da;
   }
   .services-section{
-    padding: 50px 0 100px;
+    padding: 70px 0 120px;
   }
   .services-content{
     padding-inline-start: 0;
@@ -1549,6 +1564,13 @@ ol.breadcrumb li:not(.active):after {
   .project-img-block {
     overflow: auto;
     width: 100%;
+}
+.services-section:after{
+  inset-inline-end: -280px;
+  top: -269px;
+}
+.service-title{
+  font-size: 18px;
 }
 .projects-slider .swiper-wrapper {
   z-index: 9;
@@ -1559,7 +1581,7 @@ html[dir="ltr"] .projects-slider{
   .show-icons {
     position: relative;
     font-size: 24px;
-
+z-index: 9;
     background-color: transparent;
     border: none;
     display: flex;
@@ -1578,28 +1600,40 @@ html[dir="ltr"] .projects-slider{
   .show-icons .menu-bars {
     position: relative;
     z-index: 8;
-
+font-size: 24px;
     display: flex;
     align-items: center;
-    margin-inline-start: 10px;
+   margin-inline-end: 17px;
     transition: all 0.3s ease-in-out;
   }
   .show-icons .menu-bars .bar {
     color: rgb(237, 224, 218);
+    font-size: 24px;
   }
   .show-icons .menu-bars .times {
-    color: gray;
+    color: rgb(237, 224, 218);
+    font-size: 24px;
+    z-index: 9;
   }
   .contact-link {
-    width: 120px;
-    height: 35px;
+    position: absolute;
+    inset-inline-end: 0;
+    width: 140px;
+    height: 42px;
+    font-size: 14px;
+  }
+  .quote-content .contact-link{
+    position: relative;
+    width: 190px;
+    height: 56px;
+    font-size: 19px;
   }
   .contact-link:after {
     width: 123px;
     height: 38px;
   }
   .news-section{
-    padding: 50px 0 100px;
+    padding: 70px 0 120px;
   }
   .news-img-block{
     width: 100%;
@@ -1612,14 +1646,14 @@ html[dir="ltr"] .projects-slider{
     font-size: 13px;
   }
   .nav-header .img-logo img {
-    max-width: 110px;
+    max-width: 103px;
   }
   .nav-header li a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    font-size: 16px;
-   
+    font-size: 18px;
+   font-family: "Bahij_TheSansArabic-SemiBold";
   }
   .show-icon {
     display: block;
@@ -1663,14 +1697,17 @@ html[dir="ltr"] .projects-slider{
 
   .cats-dispaly .cat-li a {
     line-height: 20px;
-
-    font-family: "Bahij_TheSansArabic-SemiBold";
+font-size: 18px;
+text-transform: capitalize;
+    font-family: "Bahij_TheSansArabic-SemiLight";
   }
   .portfolio-section{
-    padding: 40px 0;
+    padding: 40px 0 80px;
+    background-color: #ede0da;
   }
   .more-2{
     white-space: nowrap;
+    font-size: 14px;
   }
   .portfolio-content{
     flex-wrap: wrap;
@@ -1682,7 +1719,7 @@ html[dir="ltr"] .projects-slider{
     margin-bottom: 0;
   }
   .portfolio-title{
-    font-size: 21px;
+    font-size: 18px;
   }
   .menu-name.active:after {
     transform: rotate(-180deg);
@@ -1692,7 +1729,7 @@ html[dir="ltr"] .projects-slider{
     padding: 0;
   }
   .big-menu li {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
     width: 100%;
   }
 
@@ -1710,7 +1747,7 @@ html[dir="ltr"] .projects-slider{
   }
   .approach-img-div{
     width: auto;
-    margin-top: 80px;
+    margin-top: 0px;
     order: -1;
     margin-bottom: 30px;
     display: flex;
@@ -1721,14 +1758,13 @@ html[dir="ltr"] .projects-slider{
     inset-inline-start: 37px;
     bottom: 37px;
   }
-  .approach-title{
-    position: absolute !important;
-    top:0;
-  }
+  
   .vision-img-div{
     position: relative;
     height: auto;
+    order: -1;
   }
+
   .approach-content{
     position: relative;
   }
@@ -1739,8 +1775,8 @@ html[dir="ltr"] .projects-slider{
     top: 28%;
   }
   .main-banner-immg{
-    padding: 0 20px;
-   top:58%;
+   
+    top: 418px;
    width: auto;
    margin-inline-start: 0;
    height: auto;
@@ -1749,6 +1785,7 @@ html[dir="ltr"] .projects-slider{
   .main-banner-immg .img-holder{
     position: relative;
     width: 100%;
+    
   }
   .caption-title {
     font-size: 34px;
@@ -1756,7 +1793,7 @@ html[dir="ltr"] .projects-slider{
     padding-inline-start: 0;
   }
   .main-banner-immg:before{
-    inset-inline-start: 0;
+    inset-inline-start: -20px;
   }
   .quote-section:before{
     content:"";
@@ -1768,7 +1805,7 @@ html[dir="ltr"] .projects-slider{
     font-size: 30px;
   }
   .nav-header li a {
-    color: var(--main-color);
+    color: rgb(237, 224, 218);
   }
 
   .services-and-about-section {
@@ -1784,16 +1821,17 @@ html[dir="ltr"] .projects-slider{
   }
   .about-us-text {
     width: 100%;
-    font-size: 20px;
-    text-align: start;
-    margin: 0 0 30px;
+    font-size: 18px;
+    line-height: 1.778;
+    text-align: justify;
+    margin: 0 0 18px;
     max-width: 100%;
     padding-inline-end: 0;
   }
   .vision-section {
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 0;
+    padding: 0px 0 70px;
   }
   .vision-content{
     padding: 0;
@@ -1802,11 +1840,22 @@ html[dir="ltr"] .projects-slider{
   }
  
   .title{
-    font-size: 45px;
+    font-size: 36px;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     position: relative;
     z-index: 9;
+  }
+  .ff-bold{
+    font-size: 18px;
+    line-height: 1.778;
+    margin: 0;
+  }
+  .vision-paragraph{
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.778;
+    text-align: justify !important;
   }
   /* html[dir="rtl"] .title{
     font-size: 35px;
@@ -1871,7 +1920,7 @@ html[dir="ltr"] .projects-slider{
     padding-top: 0;
   }
   .slide-menu-2 .first-level-link{
-    font-size: 14px;
+   
     padding-inline-start: 10px;
     display: block;
   }
@@ -1886,8 +1935,11 @@ html[dir="ltr"] .projects-slider{
   .big-menu .language-anchor{
     font-family: "Bahij_TheSansArabic-Plain";
     position: absolute;
-    top: 40px;
-    color: gray;
+   bottom: 18px;
+   
+  }
+  .nav-header{
+    justify-content: flex-start;
   }
   .footer-bg {
     max-width: 150px;
