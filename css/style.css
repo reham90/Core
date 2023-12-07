@@ -950,20 +950,27 @@ text-align: start;
 .project-list li b{
   font-size: 22px;
   color: var(--main-color);
- 
+  text-align: start;
+  display: flex;
 }
 .project-list li span{
   color: var(--main-color);
   font-size: 20px;
   display: block;
-  align-items: start;
+  text-align: start;
 }
 .project-list li img{
   margin-inline-end: 10px;
   display: flex;
   flex-shrink: 0;
 }
-
+.project-imagee{
+  width: 292px;
+  height: 292px;
+}
+.project-imagee img{
+  width: 100%;
+}
 
 
 /*                      portfolio-section                      */
@@ -1425,8 +1432,37 @@ ol.breadcrumb li:not(.active):after {
   .scroll-down-img-section{
     display: none;
   }
+ 
   html[dir="rtl"] .vision-text{
     min-height: auto;
+  }
+  .team-content{
+    flex-wrap: wrap;
+  }
+  
+  .team-block{
+    margin: 0 auto;
+  }
+  .project-content{
+    flex-wrap: wrap;
+  }
+  .pro-text{
+    width: 100%;
+    text-align: start;
+  }
+  .project-imagee{
+    order: -1;
+    margin: 0 auto 50px;
+  }
+  .without-shape{
+    background-color: #f6efec !important;
+  }
+  .project-list{
+    display: flex;
+    gap:30px;
+  }
+  .project-list li{
+    width: 100%;
   }
   .img-logo{
     z-index: 9;
@@ -1464,6 +1500,160 @@ html[dir="rtl"] .with-square:after{
 }
 }
 /*                         breadcrumb-section                    */
+
+
+
+/*                        team                      */
+.team-content{
+  display: flex;
+  gap:30px;
+}
+.team-img{
+  width: 259px;
+  height: 259px;
+  margin-bottom: 20px;
+}
+.team-pic{
+  width: 100%;
+}
+.team-name{
+  text-transform: capitalize;
+  color: var(--main-color);
+  font-size: 24px;
+  font-family: "Bahij_TheSansArabic-ExtraBold";
+  margin: 0 0 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.job{
+  color: var(--main-color);
+  font-size: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+/*                          team                    */
+
+
+/*                           careers                   */
+.careers-title{
+  color: var(--main-color);
+  font-size: 30px;
+  font-family: "Bahij_TheSansArabic-Bold";
+  margin: 0 0 25px;
+  display: flex;
+  text-align: start;
+}
+.careers-note{
+  color: var(--main-color);
+  font-size: 22px;
+  font-family: "Bahij_TheSansArabic-SemiLight";
+  display: flex;
+  text-align: start;
+  margin-bottom: 32px;
+}
+.input-field{
+  background-color: rgb(237, 224, 218);
+  width: 557px;
+  height: 50px;
+  border: 2px solid transparent;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  color: var(--main-color);
+  font-size: 14px;
+  font-family: "Bahij_TheSansArabic-SemiLight";
+  transition: 0.5s;
+  outline: none;
+  margin-bottom: 10px;
+}
+.input-field::placeholder{
+color: rgb(128, 128, 128);
+font-size: 14px;
+  font-family: "Bahij_TheSansArabic-SemiLight";
+}
+.input-field:focus{
+  border: 2px solid var(--main-hover);
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.send-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-hover);
+  border: 0;
+  outline: none;
+  color: var(--main-color);
+  width: 120px;
+  height: 50px;
+  font-size: 16px;
+  font-family: "Bahij_TheSansArabic-Bold";
+  transition: 0.5s;
+}
+.send-btn:focus{
+  outline: none;
+}
+.send-btn:hover{
+  background-color: #ede0da;
+}
+.contact-content{
+  display: flex;
+ 
+  gap:128px;
+}
+.textarea{
+  background-color: rgb(237, 224, 218);
+  width: 557px;
+  height: 120px;
+  border: 2px solid transparent;
+  padding:  22px;
+  display: flex;
+  align-items: center;
+  color: var(--main-color);
+  font-size: 14px;
+  font-family: "Bahij_TheSansArabic-SemiLight";
+  transition: 0.5s;
+  outline: none;
+  margin-bottom: 10px;
+  position: relative;
+}
+.textarea:focus{
+  outline: none;
+  border:2px solid var(--main-hover);
+}
+.textarea:after{
+  content: "Your Message";
+  font-size: 14px;
+  font-family: "Bahij_TheSansArabic-SemiLight";
+  position: absolute;
+  top:22px;
+  inset-inline-start: 22px;
+}
+.contact-social .contact-list .nav-foot-li .nav-foot-link{
+  color: var(--main-color);
+  font-size: 16px;
+  text-align: start;
+}
+.contact-social .contact-icon{
+  font-size: 24px;
+}
+.contact-social .social-icon{
+  background-color: var(--main-color);
+  color: #ede0da;
+}
+/* 
+                           careers                            */
 
 /*                                    media query                                    */
 /*                    menu in phone size                      */
@@ -1579,6 +1769,10 @@ html[dir="rtl"] .with-square:after{
   .caption-title{
     font-size: 50px;
   }
+  .team-content{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .portfolio-content{
     gap: 30px;
   }
@@ -1652,6 +1846,19 @@ html[dir="rtl"] .with-square:after{
   }
   html[dir="rtl"] .title{
     margin: 0 0 30px;
+  }
+  .input-field{
+    width: 100%;
+  }
+  .contact-content{
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .textarea{
+    width: 100%;
+  }
+  .contact-form{
+    width: 100%;
   }
  
 .main-banner{
@@ -2149,12 +2356,22 @@ hyphens: auto;
   .main-banner{
     height: 300px;
   }
+  .project-list{
+    display: grid !important;
+    grid-template-columns: repeat(2,1fr);
+    gap:30px;
+  }
   .main-banner-immg{
     top:250px;
   }
   .portfolio-content {
     flex-wrap: nowrap;
     gap: 30px;
+}
+.contact-content{
+  display: flex;
+  flex-wrap: nowrap;
+  
 }
  
   .newsletter-button{
