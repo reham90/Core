@@ -169,7 +169,16 @@
           <input type="email" class="input-field" placeholder="البريد الإلكتروني">
           <input type="number" class="input-field" placeholder="Mobile">
           <input type="text" class="input-field" placeholder="عنوان الوظيفة">
-          <input type="file" class="input-field" placeholder="السيرة الذاتية">
+          <div class="upload__box">
+            <div class="upload__btn-box">
+               <label class="upload__btn input-field" id="file" for="customFile">
+               السيرة الذاتية
+               <b class="upload-images">رفع ملف</b>
+               <input type="file"   class="upload__inputfile" id="customFile">
+               </label>
+            </div>
+            <div class="upload__img-wrap"></div>
+         </div>
           <button type="submit" class="send-btn">
            إرسال
           </button>

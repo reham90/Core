@@ -169,7 +169,17 @@
         <input type="email" class="input-field" placeholder="Email Address">
         <input type="number" class="input-field" placeholder="Mobile">
         <input type="text" class="input-field" placeholder="Job Title">
-        <input type="file" class="input-field" placeholder="Resume">
+        <div class="upload__box">
+          <div class="upload__btn-box">
+             <label class="upload__btn input-field" id="file" for="customFile">
+               Resume
+             <b class="upload-images">Upload file</b>
+             <input type="file"   class="upload__inputfile" id="customFile">
+             </label>
+          </div>
+          <div class="upload__img-wrap"></div>
+       </div>
+       
         <button type="submit" class="send-btn">
          SEND
         </button>
