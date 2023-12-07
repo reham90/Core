@@ -145,7 +145,7 @@ header {
 .nav-header {
   display: flex;
   justify-content: space-between;
-  padding: 29px 0 0;
+  padding: 20px 0 0;
   transition: all 0.3s ease-in-out;
   align-items: center;
   position: relative;
@@ -251,7 +251,7 @@ header {
   content: " " !important;
 }
 .cats-dispaly {
-  border-radius: 10px;
+  border-radius: 0px;
   position: absolute;
   left: 90%;
     transform: translateX(-90%);
@@ -263,7 +263,7 @@ header {
   width: max-content;
   min-width: 230px;
 
-  background-color: #fff;
+  background-color: #8dbebd;
   color: var(--sec-color);
   display: flex;
   justify-content: space-between;
@@ -337,7 +337,7 @@ html[dir="ltr"] .cats-dispaly-3{
   transition: 0.5s;
 }
 .cat-anchor span:hover {
-  color: var(--main-color);
+  color: #ede0da;
 }
 
 
@@ -796,7 +796,7 @@ html[dir="rtl"] .services-section .title{
 .vision-paragraph{
   color: var(--main-color);
  text-align: justify;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
   line-height: 1.667;
   max-width: 595px;
 }
@@ -910,6 +910,19 @@ text-align: start;
 }
 .mb-60{
   margin-bottom: 60px;
+}
+.project-content{
+  display: flex;
+  justify-content: space-between;
+}
+.pro-text{
+  color: var(--main-color);
+  font-size: 22px;
+ width: 780px ;
+ font-family: "Bahij_TheSansArabic-SemiLight";
+ line-height: 1.818;
+ text-align: justify;
+ margin: 0 0 30px;
 }
 
 
@@ -1368,6 +1381,9 @@ ol.breadcrumb li:not(.active):after {
   .scroll-down-img-section{
     display: none;
   }
+  .img-logo{
+    z-index: 9;
+  }
 .about-text-2{
   width: 100%;
 }
@@ -1449,7 +1465,7 @@ html[dir="rtl"] .with-square:after{
     justify-content: flex-start;
     text-align: center;
     align-items: center;
-    padding: 25% 20px 20px;
+    padding: 156px 20px 20px;
     margin-inline-start: 0;
     position: relative;
     padding-inline-start: 5px;
@@ -1685,6 +1701,7 @@ font-size: 24px;
     width: 140px;
     height: 42px;
     font-size: 14px;
+    z-index: 9;
   }
   .quote-content .contact-link{
     position: relative;
@@ -1761,7 +1778,7 @@ font-size: 24px;
 
   .cats-dispaly .cat-li a {
     line-height: 20px;
-font-size: 18px;
+font-size: 16px;
 text-transform: capitalize;
     font-family: "Bahij_TheSansArabic-SemiLight";
   }
@@ -1816,6 +1833,7 @@ text-transform: capitalize;
     margin-bottom: 30px;
     display: flex;
     position: relative;
+    height: auto;
   }
   
   .approach-img-shape{
@@ -1909,7 +1927,7 @@ text-transform: capitalize;
   .title{
     font-size: 36px;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 22px;
     position: relative;
     z-index: 9;
   }
@@ -1919,7 +1937,7 @@ text-transform: capitalize;
     margin: 0;
   }
   .vision-paragraph{
-    margin: 0;
+    margin: 0 0 12px;
     font-size: 18px;
     line-height: 1.778;
     text-align: justify !important;
@@ -1997,7 +2015,7 @@ hyphens: auto;
   }
   .slide-menu-2 .first-level-link{
    
-    padding-inline-start: 10px;
+    padding-inline-start: 15px;
     display: block;
   }
   .second-level-link{
