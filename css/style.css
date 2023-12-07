@@ -556,6 +556,12 @@ html[dir="rtl"] .about-us-section:before{
  
  
 }
+html[dir="rtl"] .vision-text{
+  min-height: 450px;
+}
+html[dir="rtl"] .approach-content .vision-text{
+  min-height: auto;
+}
 .more-link:hover {
   color: var(--main-hover);
   text-decoration: underline;
@@ -588,9 +594,7 @@ html[dir="rtl"] .about-us-section:before{
   position: relative;
   overflow: hidden;
 }
-html[dir="rtl"] .services-section{
-  padding: 306px 0 280px;
-}
+
 
 .services-section:after{
   content: url(../images/services/services-bg-shape.png);
@@ -917,6 +921,7 @@ text-align: start;
 .project-content{
   display: flex;
   justify-content: space-between;
+  padding-bottom: 105px;
 }
 .pro-text{
   color: var(--main-color);
@@ -928,14 +933,37 @@ text-align: start;
  margin: 0 0 30px;
 }
 .project-list{
- display: flex;
- max-height: 310px;
- flex-wrap: wrap;
- gap:30px;
- list-style: none;
- margin: 0;
- padding: 0;
+  display: grid;
+  
+  flex-wrap: wrap;
+  gap: 30px 128px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(2,1fr);
 }
+.project-list li{
+  display: flex;
+ align-items: baseline;
+ 
+}
+.project-list li b{
+  font-size: 22px;
+  color: var(--main-color);
+ 
+}
+.project-list li span{
+  color: var(--main-color);
+  font-size: 20px;
+  display: block;
+  align-items: start;
+}
+.project-list li img{
+  margin-inline-end: 10px;
+  display: flex;
+  flex-shrink: 0;
+}
+
 
 
 /*                      portfolio-section                      */
@@ -1397,6 +1425,9 @@ ol.breadcrumb li:not(.active):after {
   .scroll-down-img-section{
     display: none;
   }
+  html[dir="rtl"] .vision-text{
+    min-height: auto;
+  }
   .img-logo{
     z-index: 9;
   }
@@ -1498,8 +1529,8 @@ html[dir="rtl"] .with-square:after{
 /*                                 arrow-top                           */
 .arrow-top {
   position: fixed;
-  bottom: 30px;
-  inset-inline-start: 21px;
+  bottom: 10px;
+  inset-inline-start: 10px;
   display: none;
   z-index: 10;
   text-decoration: none !important;
@@ -1647,6 +1678,7 @@ html[dir="rtl"] .with-square:after{
     display: flex;
     flex-wrap: wrap;
   }
+  
   .about-us-section{
     background-color: #ede0da;
   }
@@ -1964,6 +1996,7 @@ text-transform: capitalize;
 hyphens: auto;
 
   }
+  
   html[dir="rtl"] .vision-paragraph{
     word-break: normal;
   }
