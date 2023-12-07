@@ -84,7 +84,7 @@ $(document).ready(function() {
       }
   });
 
-   ///////// **projects-swiper-section** /////////
+   ///////// **services-swiper-section** /////////
    var projectSwiper = new Swiper(".services-section .swiper", {
     loop: true,
     a11y: {
@@ -124,6 +124,54 @@ $(document).ready(function() {
     navigation: {
       nextEl: ".services-section .swiper-btn-next",
       prevEl: ".services-section .swiper-btn-prev",
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+
+  ///////// **projects-swiper-section** /////////
+  var projectSwiper = new Swiper(".projects-section .swiper", {
+    loop: true,
+    a11y: {
+      enabled: false,
+    },
+    autoplay: false,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      667: {
+        slidesPerView: 1,
+        spaceBetween: 120,
+      },
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 120,
+      },
+      992: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      1199: {
+        slidesPerView: 3.5,
+        spaceBetween: 30,
+      },
+      1300: {
+        slidesPerView:3.5,
+        spaceBetween: 30,
+      },
+    },
+    pagination: {
+      el: ".projects-section .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".projects-section .swiper-btn-next",
+      prevEl: ".projects-section .swiper-btn-prev",
     },
     on: {
       init: function (swiper) {

@@ -943,9 +943,14 @@ text-align: start;
   grid-template-columns: repeat(2,1fr);
 }
 .project-list li{
-  display: flex;
- align-items: baseline;
- 
+position: relative;
+ margin-bottom: 20px;
+}
+.project-list li div{
+  position: absolute;
+    inset-inline-start: 50px;
+    top: 75%;
+    transform: translateY(-35%);
 }
 .project-list li b{
   font-size: 22px;
@@ -960,7 +965,7 @@ text-align: start;
   text-align: start;
 }
 .project-list li img{
-  margin-inline-end: 10px;
+ 
   display: flex;
   flex-shrink: 0;
 }
@@ -970,6 +975,74 @@ text-align: start;
 }
 .project-imagee img{
   width: 100%;
+}
+
+ .projects-section .swiper-slide-next .project-item , .projects-section  .project-item{
+  opacity: 1;
+}
+.projects-section .swiper-slide-prev .project-item{
+opacity: 0.2;
+}
+.projects-section .swiper-slide-active .project-item{
+opacity: 1;
+}
+.projects-section .swiper{
+  padding-inline-start: 196px;
+  
+}
+.projects-section .projects-slider .swiper-btn{
+  display: flex;
+  width: 120px;
+  height: 50px;
+  background-color: rgb(237, 224, 218);
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  font-size: 18px;
+  text-transform: capitalize;
+  font-family: "Bahij_TheSansArabic-Bold";
+  position: absolute;
+  z-index: 1;
+  top:0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.projects-section .projects-slider .swiper-btn:hover{
+  background-color: var(--main-hover);
+  color: var(--main-color);
+
+}
+.projects-section{
+  padding-top: 20px;
+  padding-bottom: 160px;
+  background-color: #f6efec;
+}
+.projects-section .swiper-btn.swiper-btn-next {
+  left: 583px;
+}
+html[dir="rtl"] .projects-section .swiper-btn.swiper-btn-next {
+  left: 826px;
+}
+.container-btns{
+ 
+  display: flex;
+}
+.gallery{
+  margin: 0;
+  display: block;
+  text-align: start;
+  color: var(--main-color);
+  font-size: 36px;
+  font-family: "Bahij_TheSansArabic-Bold";
+  margin-inline-end: 30px;
+  margin-bottom: 38px;
+}
+.btnss{
+  display: flex;
+}
+.projects-section .projects-slider .swiper-pagination{
+  bottom: -37px;
+ 
 }
 
 
@@ -1212,6 +1285,14 @@ html[dir="rtl"] .quote-section::before{
 }
 
 /*                      news-section                      */
+
+
+/**                       structure                        **/
+.chart img{
+width: 100%;
+}
+/**                       structure                        **/
+
 
 /*                                   footer                            */
 .footer {
@@ -2575,7 +2656,7 @@ hyphens: auto;
 
 @media only screen and  (min-width: 1170px)  {
   .container{
-    width: 1170 ;
+    width: 1170px ;
     max-width: 1170px;
   }
 
