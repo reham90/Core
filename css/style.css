@@ -566,7 +566,7 @@ html[dir="rtl"] .about-us-section:before{
   flex-direction: column;
 }
 .p-100{
-  padding: 100px 0;
+  padding: 100px 0 !important;
 }
 .about-text-2-img{
   margin-bottom: 33px;
