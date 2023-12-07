@@ -334,7 +334,7 @@ html[dir="ltr"] .cats-dispaly-3{
 
 
 .cat-anchor span {
-  transition: 0.5s;
+  transition: 0.2s;
 }
 .cat-anchor span:hover {
   color: #ede0da;
@@ -547,7 +547,8 @@ html[dir="rtl"] .about-us-section:before{
   
 }
 .more-link {
-
+  display: block;
+  text-align: start;
   color: var(--main-color);
   font-size: 18px;
  text-decoration: underline;
@@ -588,7 +589,7 @@ html[dir="rtl"] .about-us-section:before{
   overflow: hidden;
 }
 html[dir="rtl"] .services-section{
-  padding: 250px 0 280px;
+  padding: 306px 0 280px;
 }
 
 .services-section:after{
@@ -597,7 +598,9 @@ html[dir="rtl"] .services-section{
   inset-inline-end: 0;
   top:-130px;
 }
-
+html[dir="rtl"] .services-section:after{
+  transform: scale(-1);
+}
 .color-white{
   color: #ede0da;
 }
@@ -924,6 +927,15 @@ text-align: start;
  text-align: justify;
  margin: 0 0 30px;
 }
+.project-list{
+ display: flex;
+ max-height: 310px;
+ flex-wrap: wrap;
+ gap:30px;
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
 
 
 /*                      portfolio-section                      */
@@ -1144,6 +1156,10 @@ html[dir="rtl"] .quote-section::before{
   display: flex;
   font-size: 14px;
 max-width: 300px;
+text-transform: lowercase;
+}
+.contact-list .nav-foot-li .nav-foot-link:hover{
+  color: var(--main-hover);
 }
 .contact-icon {
   color: var(--main-hover);
@@ -2053,9 +2069,7 @@ hyphens: auto;
     visibility: visible;
     z-index: 99;
   }
-  html[dir="rtl"] .main-banner-immg{
-    margin-inline-start: 285px;
-  }
+ 
  
 
 
