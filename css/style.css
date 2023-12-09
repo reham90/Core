@@ -575,7 +575,7 @@ html[dir="rtl"] .approach-content .vision-text{
   flex-direction: column;
 }
 .p-100{
-  padding: 100px 0 !important;
+  padding: 50px 0 !important;
 }
 .about-text-2-img{
   margin-bottom: 33px;
@@ -610,7 +610,7 @@ html[dir="rtl"] .services-section:after{
 .color-white{
   color: #ede0da;
 }
-.project-item {
+.services-section .project-item {
   opacity: 0.2;
 }
 /* html[dir="rtl"] .projects-slider .swiper-slide{
@@ -706,6 +706,41 @@ html[dir="rtl"] .services-section:after{
 
   margin-bottom: 35px;
 }
+.pro-1-slider .swiper-pagination {
+  position: relative;
+  width: 100%;
+  bottom: -112px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  
+}
+.pro-1-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 15px;
+  height: 3px;
+ border-radius: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.302;
+  margin: 0 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  outline: none !important;
+}
+
+.pro-1-slider .swiper-pagination .swiper-pagination-bullet:hover {
+  background-color: var(--main-hover);
+}
+.pro-1-slider
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--main-hover);
+  opacity: 1;
+}
 .serv-details-paragraph{
   color: var(--main-color);
   font-size: 18px;
@@ -726,6 +761,7 @@ html[dir="rtl"] .services-section:after{
   justify-content: center;
   align-items: center;
 }
+
 .serv-details{
   margin: 0;
   gap:30px;
@@ -874,6 +910,41 @@ html[dir="rtl"] .approach-img-div{
 .approach-immg{
   position: absolute;
 }
+.pro-2-slider .swiper-pagination {
+  position: relative;
+  width: 100%;
+  bottom: -112px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  
+}
+.pro-2-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 15px;
+  height: 3px;
+ border-radius: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.302;
+  margin: 0 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  outline: none !important;
+}
+
+.pro-2-slider .swiper-pagination .swiper-pagination-bullet:hover {
+  background-color: var(--main-hover);
+}
+.pro-2-slider
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--main-hover);
+  opacity: 1;
+}
 /*                    approach-section                              */
 
 /*                      portfolio-section                      */
@@ -938,7 +1009,7 @@ text-align: start;
   display: grid;
   
   flex-wrap: wrap;
-  gap: 30px 128px;
+  gap: 50px 128px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -946,13 +1017,12 @@ text-align: start;
 }
 .project-list li{
 position: relative;
- margin-bottom: 20px;
+
+ display: flex;
+ align-items: baseline;
 }
-.project-list li div{
-  position: absolute;
-    inset-inline-start: 58px;
-    top: 70%;
-    transform: translateY(-35%);
+.project-list img{
+  margin-inline-end: 10px;
 }
 .project-list li b{
   font-size: 22px;
@@ -979,26 +1049,40 @@ position: relative;
   width: 100%;
 }
 
-.projects-section .swiper-container {
+.pro-1-slider .swiper-container {
   overflow: visible;
 }
-.projects-section .swiper-slide {
+.pro-1-slider .swiper-slide  {
 opacity: 0.2;
 }
+.pro-2-slider .swiper-slide .project-item {
+  opacity: 0.2;
+  }
+  .pro-2-slider .swiper-container {
+    overflow: visible;
+  }
 /* .projects-section .swiper-slide .prohect-item {
   opacity: 0.2;
   } */
-.projects-section .swiper-slide-visible {
+.pro-1-slider .swiper-slide-visible {
 opacity: 1;
 }
+.pro-2-slider .swiper-slide-visible  .project-item{
+  opacity: 1 ;
+  }
 /* .projects-section .swiper-slide-visible .project-item {
   opacity: 1;
   } */
-  .projects-section .swiper-slide-prev .project-item{
+  .pro-1-slider .swiper-slide-prev .project-item{
     opacity: 1;
   }
-
+  .pro-2-slider .swiper-slide-prev .project-item{
+    opacity: 1;
+  }
 .projects-section .projects-slider .swiper-btn{
+  display: none;
+}
+.projects-section .tabss{
   display: flex;
   width: 120px;
   height: 50px;
@@ -1009,13 +1093,52 @@ opacity: 1;
   font-size: 18px;
   text-transform: capitalize;
   font-family: "Bahij_TheSansArabic-Bold";
-  
+  margin-inline-end: 10px;
   z-index: 1;
   top:0;
   cursor: pointer;
   transition: 0.5s;
 }
-.projects-section .projects-slider .swiper-btn:hover{
+.projects-section .tabss.active{
+  background-color: var(--main-hover);
+  color: var(--main-color);
+}
+.projects-section .tabss.active a , .projects-section .tabss a{
+  color: var(--main-color);
+  transition: 0.5s;
+  width: 120px;
+  height: 50px;
+  border-radius: 0;
+  border:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects-section .nav-tabs .nav-item.show .nav-link,.projects-section .nav-tabs .nav-link.active{
+  background-color: var(--main-hover);
+  color: var(--main-color);
+  width: 120px;
+  height: 50px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  transition: 0.5s;
+ 
+}
+.projects-section .nav-tabs .nav-link:focus,.projects-section .nav-tabs .nav-link:hover{
+background-color: var(--main-hover);
+color: var(--main-color);
+border-radius: 0;
+border: 0;
+width: 120px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.projects-section .tabss:hover{
   background-color: var(--main-hover);
   color: var(--main-color);
 
@@ -1606,12 +1729,14 @@ ol.breadcrumb li:not(.active):after {
   .team-content{
     flex-wrap: wrap;
   }
+ 
   
   .team-block{
     margin: 0 auto;
   }
   .project-content{
     flex-wrap: wrap;
+    padding-bottom: 50px;
   }
   .pro-text{
     width: 100%;
@@ -1628,14 +1753,30 @@ text-align: justify;
   }
   .project-list{
     display: flex;
-    gap:50px 128px;
+    gap:50px 0;
+   
   }
   .project-list li{
-    width: 25%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 50%;
     
+  }
+  .project-list li img{
+    margin-bottom: 10px;
   }
   .project-list li div{
     width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    inset-inline-start: 0;
+    transform: translateY(0);
   }
   .img-logo{
     z-index: 9;
@@ -2070,6 +2211,7 @@ padding: 0 20px;
   }
   .project-list li span{
     font-size: 16px;
+    text-align: center;
   }
  
   html[dir="rtl"] .vision-img-div{

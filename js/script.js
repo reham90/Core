@@ -133,7 +133,7 @@ $(document).ready(function() {
   });
 
   ///////// **projects-swiper-section** /////////
-  var projectSwiper = new Swiper(".projects-section .swiper", {
+  var projectSwiper = new Swiper(".pro-1-slider .swiper", {
     loop: true,
     spaceBetween: 30,
     slidesPerView: 3,
@@ -159,21 +159,21 @@ $(document).ready(function() {
         spaceBetween: 30,
       },
       1199: {
-        slidesPerView: 3.5,
+        slidesPerView: 3,
         spaceBetween: 30,
       },
       1300: {
-        slidesPerView:3.5,
+        slidesPerView:3,
         spaceBetween: 30,
       },
     },
     pagination: {
-      el: ".projects-section .swiper-pagination",
+      el: ".pro-1-slider .swiper-pagination",
       clickable: true,
     },
     navigation: {
-      nextEl: ".projects-section .swiper-btn-next",
-      prevEl: ".projects-section .swiper-btn-prev",
+      nextEl: ".pro-1-slider .swiper-btn-next",
+      prevEl: ".pro-1-slider .swiper-btn-prev",
     },
     on: {
       init: function (swiper) {
@@ -182,6 +182,55 @@ $(document).ready(function() {
     },
   });
 
+    ///////// **projects-swiper-section-2** /////////
+    var projectSwiper = new Swiper(".pro-2-slider .swiper", {
+      loop: true,
+      spaceBetween: 30,
+      slidesPerView: 3,
+      watchSlidesVisibility: true,
+      centeredSlides: true,
+      loopedSlides: 5,
+      autoplay: false,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        667: {
+          slidesPerView: 1,
+          spaceBetween: 120,
+        },
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 120,
+        },
+        992: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        1199: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1300: {
+          slidesPerView:3,
+          spaceBetween: 30,
+        },
+      },
+      pagination: {
+        el: ".pro-2-slider .swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".pro-2-slider .swiper-btn-next",
+        prevEl: ".pro-2-slider .swiper-btn-prev",
+      },
+      on: {
+        init: function (swiper) {
+          lazyLoad();
+        },
+      },
+    });
   ///////// **news-swiper-section** /////////
   var screen = new Swiper(".news .swiper-container", {
     loop: true,
