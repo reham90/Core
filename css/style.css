@@ -1009,7 +1009,7 @@ opacity: 1;
   font-size: 18px;
   text-transform: capitalize;
   font-family: "Bahij_TheSansArabic-Bold";
-  position: absolute;
+  
   z-index: 1;
   top:0;
   cursor: pointer;
@@ -1026,11 +1026,9 @@ opacity: 1;
   background-color: #f6efec;
 }
 .projects-section .swiper-btn.swiper-btn-next {
-  left: 583px;
+  margin-inline-start: 10px;
 }
-html[dir="rtl"] .projects-section .swiper-btn.swiper-btn-next {
-  left: 930px;
-}
+
 .container-btns{
  
   display: flex;
@@ -1617,7 +1615,9 @@ ol.breadcrumb li:not(.active):after {
   }
   .pro-text{
     width: 100%;
-    text-align: start;
+   
+    font-size: 18px;
+text-align: justify;
   }
   .project-imagee{
     order: -1;
@@ -1631,6 +1631,10 @@ ol.breadcrumb li:not(.active):after {
     gap:50px 128px;
   }
   .project-list li{
+    width: 25%;
+    
+  }
+  .project-list li div{
     width: 100%;
   }
   .img-logo{
@@ -1782,7 +1786,8 @@ input[type=number] {
   outline: none;
 }
 .send-btn:hover{
-  background-color: #ede0da;
+  background-color: var(--main-color);
+  color: #ede0da;
 }
 .contact-content{
   display: flex;
@@ -1855,9 +1860,7 @@ input[type=number] {
   .projects-section .projects-slider .swiper-btn{
     position: relative;
   }
-  .projects-section .swiper-btn.swiper-btn-next{
-    left: 10px;
-  }
+ 
   .container-btns{
     flex-wrap: wrap;
     margin-bottom: 15px;
@@ -1979,6 +1982,12 @@ padding: 0 20px;
   .caption-title{
     font-size: 50px;
   }
+  .pro-text{
+    width: 670px;
+  }
+  .project-text{
+    width: 100%;
+  }
   .team-content{
     flex-wrap: wrap;
     justify-content: center;
@@ -2056,9 +2065,13 @@ padding: 0 20px;
   body {
     position: relative;
   }
-  html[dir="rtl"] .projects-section .swiper-btn.swiper-btn-next{
-    left: -10px;
+  .project-list li b{
+    font-size: 18px;
   }
+  .project-list li span{
+    font-size: 16px;
+  }
+ 
   html[dir="rtl"] .vision-img-div{
     width: auto;
     position: relative;
@@ -2599,9 +2612,7 @@ hyphens: auto;
   .gallery{
     margin: 0;
   }
-  html[dir="rtl"] .projects-section .swiper-btn.swiper-btn-next {
-    left: 10px;
-}
+
   .project-list{
     display: grid !important;
     grid-template-columns: repeat(2,1fr);
