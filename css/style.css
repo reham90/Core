@@ -1,4 +1,6 @@
-
+html{
+  overflow-x: hidden;
+}
 body {
   font-family: "Bahij_TheSansArabic-Plain";
   box-sizing: border-box;
@@ -948,8 +950,8 @@ position: relative;
 }
 .project-list li div{
   position: absolute;
-    inset-inline-start: 50px;
-    top: 75%;
+    inset-inline-start: 58px;
+    top: 70%;
     transform: translateY(-35%);
 }
 .project-list li b{
@@ -977,19 +979,25 @@ position: relative;
   width: 100%;
 }
 
- .projects-section .swiper-slide-next .project-item , .projects-section  .project-item{
-  opacity: 1;
+.projects-section .swiper-container {
+  overflow: visible;
 }
-.projects-section .swiper-slide-prev .project-item{
+.projects-section .swiper-slide {
 opacity: 0.2;
 }
-.projects-section .swiper-slide-active .project-item{
+/* .projects-section .swiper-slide .prohect-item {
+  opacity: 0.2;
+  } */
+.projects-section .swiper-slide-visible {
 opacity: 1;
 }
-.projects-section .swiper{
-  padding-inline-start: 196px;
-  
-}
+/* .projects-section .swiper-slide-visible .project-item {
+  opacity: 1;
+  } */
+  .projects-section .swiper-slide-prev .project-item{
+    opacity: 1;
+  }
+
 .projects-section .projects-slider .swiper-btn{
   display: flex;
   width: 120px;
@@ -1021,7 +1029,7 @@ opacity: 1;
   left: 583px;
 }
 html[dir="rtl"] .projects-section .swiper-btn.swiper-btn-next {
-  left: 826px;
+  left: 825px;
 }
 .container-btns{
  
@@ -1560,7 +1568,10 @@ html[dir="rtl"] .footer-accordion.active:after {
   text-align: start;
 }
 html[dir="rtl"] .breadcrumb-title{
-  margin: 0 0 30px;
+  margin: 0 0 10px;
+}
+ol.breadcrumb li a, ol.breadcrumb li span, ol.breadcrumb li{
+  font-size: 12px;
 }
 ol.breadcrumb {
   background-color: transparent;
@@ -1575,7 +1586,7 @@ ol.breadcrumb {
   z-index: 2;
 }
  ol.breadcrumb li a,  ol.breadcrumb li span,  ol.breadcrumb li {
-  font-size: 14px;
+  font-size: 12px;
   
   color: var(--main-hover);
   text-decoration: none;
@@ -1617,7 +1628,7 @@ ol.breadcrumb li:not(.active):after {
   }
   .project-list{
     display: flex;
-    gap:30px;
+    gap:50px 128px;
   }
   .project-list li{
     width: 100%;
@@ -1630,6 +1641,8 @@ ol.breadcrumb li:not(.active):after {
 }
 .serv-details-paragraph{
   width: 100%;
+  line-height: 1.8;
+  font-size: 18px;
 }
 .serv-details{
   flex-wrap: wrap;
@@ -1638,7 +1651,7 @@ ol.breadcrumb li:not(.active):after {
   width: 100%;
 }
 .breadcrumb-title{
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
 }
 .with-square{
@@ -1648,13 +1661,19 @@ ol.breadcrumb li:not(.active):after {
   padding-top: 130px;
 }
 .with-square:after{
-  top:200px;
+  top:225px;
+  width: 45px;
+  height: 45px;
+  inset-inline-end: 20px;
+  display: block;
+  overflow: hidden;
 }
 html[dir="rtl"] .with-square:after{
-  top:215px;
+ transform: scale(-1);
+
 }
 .p-100{
-  padding: 70px 0 !important;
+  padding: 50px 0 !important;
 }
 }
 /*                         breadcrumb-section                    */
@@ -1826,6 +1845,30 @@ input[type=number] {
 /*                    menu in phone size                      */
 
 @media (max-width: 991px) {
+  html{
+    overflow-x: hidden;
+  }
+  .gallery{
+    font-size: 30px;
+    margin: 0 0 15px;
+  }
+  .projects-section .projects-slider .swiper-btn{
+    position: relative;
+  }
+  .projects-section .swiper-btn.swiper-btn-next{
+    left: 10px;
+  }
+  .container-btns{
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+
+  }
+  .projects-section .projects-slider .swiper{
+padding: 0 20px;
+  }
+  .projects-section .projects-slider:after{
+    background-color: transparent;
+  }
   .navgition {
     display: block;
     position: fixed;
@@ -1940,6 +1983,12 @@ input[type=number] {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .projects-section .swiper-btn.swiper-btn-next{
+    left: 431px;
+  }
+  html[dir="rtl"] .projects-section .swiper-btn.swiper-btn-next {
+    left: 470px;
+}
   .portfolio-content{
     gap: 30px;
   }
@@ -2017,8 +2066,25 @@ input[type=number] {
   .input-field{
     width: 100%;
   }
+  .team-name{
+    font-size: 20px;
+  }
+  .job {
+    color: var(--main-color);
+    font-size: 18px;
+  }
+  .team-name {
+    margin: 0 0 5px;
+  }
+  .careers-title {
+    font-size: 24px;
+    margin: 0 0 15px;
+  }
+  .careers-note {
+    font-size: 18px;
+  }
   .contact-content{
-    gap: 30px;
+    gap: 60px;
     flex-wrap: wrap;
   }
   .textarea{
@@ -2523,6 +2589,16 @@ hyphens: auto;
   .main-banner{
     height: 300px;
   }
+  .container-btns{
+    gap:30px;
+    align-items: center;
+  }
+  .gallery{
+    margin: 0;
+  }
+  html[dir="rtl"] .projects-section .swiper-btn.swiper-btn-next {
+    left: 10px;
+}
   .project-list{
     display: grid !important;
     grid-template-columns: repeat(2,1fr);

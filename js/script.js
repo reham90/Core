@@ -135,9 +135,11 @@ $(document).ready(function() {
   ///////// **projects-swiper-section** /////////
   var projectSwiper = new Swiper(".projects-section .swiper", {
     loop: true,
-    a11y: {
-      enabled: false,
-    },
+    spaceBetween: 30,
+    slidesPerView: 3,
+    watchSlidesVisibility: true,
+    centeredSlides: true,
+    loopedSlides: 5,
     autoplay: false,
     breakpoints: {
       0: {
