@@ -709,7 +709,7 @@ html[dir="rtl"] .services-section:after{
 .pro-1-slider .swiper-pagination {
   position: relative;
   width: 100%;
-  bottom: -112px;
+  bottom: -70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -913,7 +913,7 @@ html[dir="rtl"] .approach-img-div{
 .pro-2-slider .swiper-pagination {
   position: relative;
   width: 100%;
-  bottom: -112px;
+  bottom: -70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

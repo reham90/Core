@@ -133,7 +133,7 @@ $(document).ready(function() {
   });
 
   ///////// **projects-swiper-section** /////////
-  var projectSwiper = new Swiper(".pro-1-slider .swiper", {
+  var projectSwipers = new Swiper(".pro-1-slider .swiper", {
     loop: true,
     spaceBetween: 30,
     slidesPerView: 3,
@@ -183,7 +183,7 @@ $(document).ready(function() {
   });
 
     ///////// **projects-swiper-section-2** /////////
-    var projectSwiper = new Swiper(".pro-2-slider .swiper", {
+    var projectSwiperr = new Swiper(".pro-2-slider .swiper", {
       loop: true,
       spaceBetween: 30,
       slidesPerView: 3,
