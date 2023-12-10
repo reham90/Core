@@ -175,6 +175,8 @@ $(document).ready(function() {
       nextEl: ".pro-1-slider .swiper-btn-next",
       prevEl: ".pro-1-slider .swiper-btn-prev",
     },
+    observer:true,
+    observeParents:true,
     on: {
       init: function (swiper) {
         lazyLoad();
@@ -185,6 +187,8 @@ $(document).ready(function() {
     ///////// **projects-swiper-section-2** /////////
     var projectSwiperr = new Swiper(".pro-2-slider .swiper", {
       loop: true,
+      observer:true,
+    observeParents:true,
       spaceBetween: 30,
       slidesPerView: 3,
       watchSlidesVisibility: true,
