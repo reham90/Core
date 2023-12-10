@@ -206,7 +206,7 @@ header {
 
 
 .nav-header li a:hover {
-  color: var(--main-hover);
+  color: #ede0da;
 }
 
 .nav-header li {
